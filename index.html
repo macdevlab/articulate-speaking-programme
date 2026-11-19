@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14213d"><meta name="description" content="A practical 30-day programme to build confident, clear and articulate speaking.">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css"><title>Articulate — 30-Day Speaking Programme</title>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brandmark">A</span><span>ARTICULATE<small>30-DAY SPEAKING PROGRAMME</small></span></a><div class="top-actions"><button id="installBtn" class="ghost hidden">Install app</button><button id="resetBtn" class="ghost">Reset progress</button></div></header>
+<main class="wrap">
+<section class="hero">
+ <div><p class="eyebrow">YOUR DAILY 15-MINUTE PRACTICE</p><h1>Speak clearly.<br><em>Think confidently.</em></h1><p class="hero-copy">Build the habit of expressing your ideas with clarity, confidence and structure — one short session at a time.</p><div class="hero-actions"><button id="startToday" class="primary">Start today's session <span>→</span></button><span class="today-label" id="todayLabel"></span></div></div>
+ <div class="hero-stat"><div class="ring" id="progressRing"><div><strong id="progressPercent">0%</strong><small>COMPLETE</small></div></div><p><b id="completedCount">0 of 30</b><br><span>days completed</span></p></div>
+</section>
+<section class="stats">
+ <article><span class="stat-icon">✓</span><div><strong id="streak">0 days</strong><small>Current streak</small></div></article>
+ <article><span class="stat-icon">◷</span><div><strong id="minutes">0 min</strong><small>Practice completed</small></div></article>
+ <article><span class="stat-icon">✦</span><div><strong id="wordsLearned">0 / 30</strong><small>Vocabulary mastered</small></div></article>
+</section>
+<div class="content-grid">
+ <section class="panel session-panel" id="sessionPanel">
+  <div class="section-heading"><div><p class="eyebrow">YOUR NEXT STEP</p><h2 id="sessionHeading">Today's session</h2></div><span class="pill" id="dayPill">DAY 1</span></div>
+  <div id="sessionContent"></div>
+ </section>
+ <aside class="panel timer-panel">
+  <p class="eyebrow">FOCUS TIMER</p><h2>15 minutes</h2><p class="muted">Give yourself a short, distraction-free window to practise.</p>
+  <div class="timer" id="timer">15:00</div><div class="timer-controls"><button class="primary" id="timerToggle">Start timer</button><button class="ghost" id="timerReset">Reset</button></div>
+  <div class="timer-note">Suggested split: 4 min vocabulary · 5 min speaking · 4 min articulation · 2 min review</div>
+ </aside>
+</div>
+<section class="panel programme-panel">
+ <div class="section-heading"><div><p class="eyebrow">THE FULL JOURNEY</p><h2>Your 30-day programme</h2><p class="muted">Select any day to view its challenge and record your practice.</p></div><div class="filter-wrap"><select id="weekFilter" aria-label="Filter by week"><option value="all">All 30 days</option><option value="1">Week 1 · Foundations</option><option value="2">Week 2 · Vocabulary</option><option value="3">Week 3 · Professional communication</option><option value="4">Week 4 · Fluency and confidence</option><option value="5">Days 29–30 · Final assessment</option></select></div></div>
+ <div class="week-label">WEEK 1 <span>Build your foundations</span></div><div class="day-grid" id="dayGrid"></div>
+</section>
+<section class="lower-grid">
+ <section class="panel vocab-panel"><div class="section-heading"><div><p class="eyebrow">WORD POWER</p><h2>Vocabulary practice</h2></div><span class="pill" id="vocabDay">TODAY'S WORD</span></div><div id="vocabCard"></div></section>
+ <section class="panel reflection-panel"><p class="eyebrow">BUILD SELF-AWARENESS</p><h2>Session reflection</h2><p class="muted">Capture one thing that went well and one thing to improve.</p><label for="reflection">Your notes</label><textarea id="reflection" rows="4" placeholder="Today I spoke clearly when… Next time I will…"></textarea><button id="saveReflection" class="secondary">Save reflection</button><span id="saveStatus" class="save-status" aria-live="polite"></span></section>
+</section>
+<footer><span>ARTICULATE · YOUR PROGRESS IS SAVED ON THIS DEVICE</span><span>Made for consistent, confident communication.</span></footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body></html>
